@@ -1,4 +1,5 @@
 import  DC_modeling
+import  json
 from DC_modeling import Getdatas
 
 pbounds = {
@@ -33,25 +34,32 @@ for i in range(iters):
     datas_trans = Getdatas("test_model//5DC_trans.txt", "Plotname: DC ct1[1]")
     datas_out = Getdatas("test_model//5DC_output.txt", "Plotname: DC ct1[1]")
     datas_input = -datas_input[0,:,12:]
+    datas_input = datas_input.tolist()
     datas_trans_lin = -datas_trans_lin[:3,:,13]
+    datas_trans_lin = datas_trans_lin.tolist()
     dssub = []
     for j in range(21):
-        dssub.append(-datas_trans_sub[j, :, 13])
+        dssub.append((-datas_trans_sub[j, :, 13]).tolist())
     dstrans = []
     for k in range(6):
-        dstrans.append(-datas_trans[k, :, 13])
+        dstrans.append((-datas_trans[k, :, 13]).tolist())
     for k in range(len(datas_trans[:])):
-        dstrans.append(-datas_trans[:,k,13])
+        dstrans.append((-datas_trans[:,k,13]).tolist())
     dsout = []
     for j in range(24):
-        dsout.append(-datas_out[j, :, 13])
+        dsout.append((-datas_out[j, :, 13]).tolist())
 
     datasets = [datas_input, datas_trans_lin, dssub, dstrans, dsout]
-    filenames = ['ds_input.txt', 'ds_trans_lin.txt', 'ds_sub.txt', 'ds_trans.txt', 'ds_out.txt']
+    # filenames = ['ds_input{}.txt', 'ds_trans_lin{}.txt', 'ds_sub{}.txt', 'ds_trans{}.txt', 'ds_out{}.txt']
+    filenames = ['ds_input{}.json', 'ds_trans_lin{}.json', 'ds_sub{}.json', 'ds_trans{}.json', 'ds_out{}.json']
+
     for data, filename in zip(datasets, filenames):
-        filename = "Datafortranin//" +filename
+        filename = filename.format(i)
+        filename = "Datafortranin//" + filename
         # 'w'表示write，会覆盖原有内容；如果你希望追加内容，可以使用'a'
-        with open(filename, 'w') as file:
-            for item in data:
-                # write()函数只接受字符串类型的参数，所以我们需要将数据转化为字符串
-                file.write("%s\n" % item)
+        # with open(filename, 'w') as file:
+        #     for item in data:
+        #         # write()函数只接受字符串类型的参数，所以我们需要将数据转化为字符串
+        #         file.write("%s\n" % item)
+        with open(filename, 'w') as f:
+            json.dump(data, f)
