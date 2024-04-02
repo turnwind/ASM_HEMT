@@ -1,0 +1,60 @@
+
+hpeesofsim (*) 570.shp Jul 18 2022, MINT version 5
+    (64-bit windows built: Tue Jul 19, 2022 06:26:23 +0000)
+
+
+***** Simulation started at Sun Mar 31 13:53:14 2024
+      Running on host: "yangforever"
+      In Directory: "C:\Users\87515\Documents\PyProject\ASM_HEMT\test_model"
+      Process ID: 4596
+
+Parsing the netlist ...
+Flattening the netlist ...
+
+CT ct1[1] <5DC_trans_su.txt>   VDGROUND.Vdc=(1 V->21 V)
+
+DC ct1[1].dc1[1/21] <5DC_trans_su.txt>  VDGROUND.Vdc=1 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[2/21] <5DC_trans_su.txt>  VDGROUND.Vdc=2 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[3/21] <5DC_trans_su.txt>  VDGROUND.Vdc=3 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[4/21] <5DC_trans_su.txt>  VDGROUND.Vdc=4 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[5/21] <5DC_trans_su.txt>  VDGROUND.Vdc=5 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[6/21] <5DC_trans_su.txt>  VDGROUND.Vdc=6 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[7/21] <5DC_trans_su.txt>  VDGROUND.Vdc=7 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[8/21] <5DC_trans_su.txt>  VDGROUND.Vdc=8 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[9/21] <5DC_trans_su.txt>  VDGROUND.Vdc=9 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[10/21] <5DC_trans_su.txt>  VDGROUND.Vdc=10 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[11/21] <5DC_trans_su.txt>  VDGROUND.Vdc=11 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[12/21] <5DC_trans_su.txt>  VDGROUND.Vdc=12 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[13/21] <5DC_trans_su.txt>  VDGROUND.Vdc=13 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[14/21] <5DC_trans_su.txt>  VDGROUND.Vdc=14 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[15/21] <5DC_trans_su.txt>  VDGROUND.Vdc=15 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[16/21] <5DC_trans_su.txt>  VDGROUND.Vdc=16 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[17/21] <5DC_trans_su.txt>  VDGROUND.Vdc=17 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[18/21] <5DC_trans_su.txt>  VDGROUND.Vdc=18 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[19/21] <5DC_trans_su.txt>  VDGROUND.Vdc=19 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[20/21] <5DC_trans_su.txt>  VDGROUND.Vdc=20 V  VGGROUND.Vdc=(-9 V->0 V)
+
+DC ct1[1].dc1[21/21] <5DC_trans_su.txt>  VDGROUND.Vdc=21 V  VGGROUND.Vdc=(-9 V->0 V)
+Checking for unresolved variables ...
+Flushing data (please wait) ...
+     ... data flush done.
+

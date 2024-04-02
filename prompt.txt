@@ -1,0 +1,8 @@
+You are helping tune hyperparameters to minimize loss .
+x1 must be in range { search_space [-5，5]}. x2 must be in range {search_space [-5，5]}. 
+I want you to predict values that minimize the loss of the function ;
+Here are your historical trial data, formatted as [parameters] - [loss]:
+{"x": [0, 0]} - ["loss": 13]
+Please do not provide parameters that have already been tried!
+Do not put new lines or extra characters in your response ！
+Please give you answer and format your output as follows : {"x": [x1, x2]}

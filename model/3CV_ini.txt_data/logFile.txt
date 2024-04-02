@@ -1,0 +1,592 @@
+
+hpeesofsim (*) 570.shp Jul 18 2022, MINT version 5
+    (64-bit windows built: Tue Jul 19, 2022 06:26:23 +0000)
+
+
+***** Simulation started at Tue Mar 19 13:31:44 2024
+      Running on host: "yangforever"
+      In Directory: "C:\Users\87515\Documents\PyProject\ASM_HEMT\model"
+      Process ID: 151892
+
+Parsing the netlist ...
+Flattening the netlist ...
+
+Warning detected by hpeesofsim during circuit set up.
+    Capacitor `XCKT.CACshort2' C=0.1 is unusually large.
+
+
+Warning detected by hpeesofsim during circuit set up.
+    Capacitor `XCKT.CACshort1' C=0.1 is unusually large.
+
+
+CT ct2[1] <3CV_ini.txt>   VP2GROUND.Vdc=(0 V->400 mV)
+
+CT ct2[1].ct1[1/3] <3CV_ini.txt>  VP2GROUND.Vdc=0 V  VP1GROUND.Vdc=(-9 V->0 V)
+
+SP ct2[1].ct1[1/3].S_Parameters[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+SP ct2[1].ct1[1/3].S_Parameters[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=0 V  freq=100 MHz
+
+CT ct2[1].ct1[2/3] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV  VP1GROUND.Vdc=(-9 V->0 V)
+
+SP ct2[1].ct1[2/3].S_Parameters[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+SP ct2[1].ct1[2/3].S_Parameters[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=0 V  freq=100 MHz
+
+CT ct2[1].ct1[3/3] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV  VP1GROUND.Vdc=(-9 V->0 V)
+
+SP ct2[1].ct1[3/3].S_Parameters[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+SP ct2[1].ct1[3/3].S_Parameters[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=0 V  freq=100 MHz
+
+CT dcct2[1] <3CV_ini.txt>   VP2GROUND.Vdc=(0 V->400 mV)
+
+CT dcct2[1].dcct1[1/3] <3CV_ini.txt>  VP2GROUND.Vdc=0 V  VP1GROUND.Vdc=(-9 V->0 V)
+
+DC dcct2[1].dcct1[1/3].dc1[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[1/3].dc1[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=0 V VP1GROUND.Vdc=0 V  freq=100 MHz
+
+CT dcct2[1].dcct1[2/3] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV  VP1GROUND.Vdc=(-9 V->0 V)
+
+DC dcct2[1].dcct1[2/3].dc1[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[2/3].dc1[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=200 mV VP1GROUND.Vdc=0 V  freq=100 MHz
+
+CT dcct2[1].dcct1[3/3] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV  VP1GROUND.Vdc=(-9 V->0 V)
+
+DC dcct2[1].dcct1[3/3].dc1[1/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-9 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[2/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[3/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[4/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[5/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[6/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[7/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[8/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[9/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[10/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[11/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-7 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[12/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[13/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[14/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[15/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[16/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[17/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[18/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[19/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[20/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[21/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-5 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[22/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[23/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[24/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[25/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[26/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[27/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[28/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[29/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[30/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[31/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-3 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[32/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[33/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[34/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[35/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[36/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[37/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.8 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[38/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.6 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[39/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.4 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[40/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1.2 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[41/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-1 V  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[42/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-800 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[43/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-600 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[44/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-400 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[45/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=-200 mV  freq=100 MHz
+
+DC dcct2[1].dcct1[3/3].dc1[46/46] <3CV_ini.txt>  VP2GROUND.Vdc=400 mV VP1GROUND.Vdc=0 V  freq=100 MHz
+Checking for unresolved variables ...
+Flushing data (please wait) ...
+     ... data flush done.
+

@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+import DataExtraction
+
+mds = DataExtraction.loadmeasures(7)
+datas,labels  = DataExtraction.get_values(file="model//2DC_ini.txt")
+
+for i in range(13,14):
+    figure, axes = plt.subplots(2, 2)
+    #plt.plot(datas[0,:,0],-datas[0,:,i],label = "50mv")
+    #plt.plot(datas[1,:,0],-datas[1,:,i], label = "100mv")
+    #plt.plot(datas[2,:,0],-datas[2,:,i], label = "150mv")
+    #plt.plot(mds[0,:,0],mds[0,:,1],label = "m_50mv",marker = "o",c="red")
+    #plt.plot(mds[1,:,0],mds[1,:,1], label = "m_100mv",marker = "o",c="red")
+    #plt.plot(mds[2,:,0],mds[2,:,1], label = "m_150mv",marker = "o",c="red")
+    axes[0][0].plot(datas[0,:,0],-datas[0,:,i],label = "50mv")
+    axes[0][0].plot(datas[1,:,0],-datas[1,:,i], label = "100mv")
+    axes[0][0].plot(datas[2,:,0],-datas[2,:,i], label = "150mv")
+    axes[0][0].plot(mds[0,:,0],mds[0,:,1],label = "m_50mv",marker = "o",c="red")
+    axes[0][0].plot(mds[1,:,0],mds[1,:,1], label = "m_100mv",marker = "o",c="red")
+    axes[0][0].plot(mds[2,:,0],mds[2,:,1], label = "m_150mv",marker = "o",c="red")
+    axes[0][1].plot(datas[0, :, 0], np.log(np.abs(-datas[0, :, i])), label="50mv")
+    axes[0][1].plot(datas[1, :, 0], np.log(np.abs(-datas[1, :, i])), label="100mv")
+    axes[0][1].plot(datas[2, :, 0], np.log(np.abs(-datas[2, :, i])), label="150mv")
+    axes[0][1].plot(mds[0,:,0],np.log(np.abs(mds[0,:,1])),label = "m_50mv",marker = "o",c="red")
+    axes[0][1].plot(mds[1,:,0],np.log(np.abs(mds[1,:,1])), label = "m_100mv",marker = "o",c="red")
+    axes[0][1].plot(mds[2,:,0],np.log(np.abs(mds[2,:,1])), label = "m_150mv",marker = "o",c="red")
+    gm1 = np.gradient(-datas[0, :, i],datas[0,:,0])
+    gm2 = np.gradient(-datas[1, :, i],datas[1,:,0])
+    gm3 = np.gradient(-datas[2, :, i], datas[2, :, 0])
+    ggm1 = np.gradient(gm1,datas[0,:,0])
+    ggm2 = np.gradient(gm2, datas[1, :, 0])
+    ggm3 = np.gradient(gm3, datas[2, :, 0])
+    axes[1][0].plot(datas[0, :, 0],gm1,  label="50mv")
+    axes[1][0].plot(datas[1, :, 0],gm2,  label="100mv")
+    axes[1][0].plot(datas[2, :, 0],gm3,  label="150mv")
+    axes[1][1].plot(datas[0, :, 0],ggm1,  label="50mv")
+    axes[1][1].plot(datas[1, :, 0],ggm2,  label="100mv")
+    axes[1][1].plot(datas[2, :, 0],ggm3,  label="150mv")
+    plt.xlabel(labels[0])
+    plt.ylabel(labels[i])
+    plt.legend()
+    plt.show()
+

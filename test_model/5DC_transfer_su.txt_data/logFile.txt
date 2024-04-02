@@ -1,0 +1,19 @@
+
+hpeesofsim (*) 570.shp Jul 18 2022, MINT version 5
+    (64-bit windows built: Tue Jul 19, 2022 06:26:23 +0000)
+
+
+***** Simulation started at Tue Mar 19 16:58:30 2024
+      Running on host: "yangforever"
+      In Directory: "C:\Users\87515\Documents\PyProject\ASM_HEMT\test_model"
+      Process ID: 153804
+
+Parsing the netlist ...
+
+Error detected by hpeesofsim in Netlist processing during netlist parsing.
+    Netlist file does not exist:
+        '5DC_transfer_su.txt'
+
+Flushing data (please wait) ...
+     ... data flush done.
+
