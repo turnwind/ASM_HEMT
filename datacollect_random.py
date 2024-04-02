@@ -39,9 +39,9 @@ for i in range(iters):
         dssub.append(-datas_trans_sub[j, :, 13])
     dstrans = []
     for k in range(6):
-        dstrans.append([-datas_trans[k, :, 13]])
+        dstrans.append(-datas_trans[k, :, 13])
     for k in range(len(datas_trans[:])):
-        dstrans.append([-datas_trans[:,k,13]])
+        dstrans.append(-datas_trans[:,k,13])
     dsout = []
     for j in range(24):
         dsout.append(-datas_out[j, :, 13])
