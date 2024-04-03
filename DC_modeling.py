@@ -205,17 +205,22 @@ def plotsingle(paras,flag):
         axes[1].set_xlabel("vd")
         axes[1].set_ylabel("id")
         plt.suptitle('ig_vgs__Transfer')
+    else:
+        figure = plt.figure(figsize=(12, 6))
+        for j in range(24):
+            plt.plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
+            plt.plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
     plt.show()
 
 def plots(paras):
-    figure, axes = plt.subplots(2, 3, figsize=(12, 6))
+    figure, axes = plt.subplots(2, 4, figsize=(12, 6))
     Changeparas(paras)
     # 更新数据
     datas_input = Getdatas("test_model//5DC_input.txt", "Plotname: DC dc1[1]")
     datas_trans_lin = Getdatas("test_model//5DC_transfer_lin.txt", "Plotname: DC ct1[1]")
     datas_trans_sub = Getdatas("test_model//5DC_trans_su.txt", "Plotname: DC ct1[1]")
     datas_trans = Getdatas("test_model//5DC_trans.txt", "Plotname: DC ct1[1]")
-    # datas_out = Getdatas("test_model//5DC_output.txt", "Plotname: DC ct1[1]")
+    datas_out = Getdatas("test_model//5DC_output.txt", "Plotname: DC ct1[1]")
 
     # 绘制新的帧
     #### input
@@ -246,9 +251,9 @@ def plots(paras):
         axes[1][2].plot(xx, -datas_trans[:, k, 13], c="blue")
         axes[1][2].plot(xx, mds_trans[:, k, 1], marker="o", c="red", markersize=2)
     #
-    # for j in range(24):
-    #     axes[1][2].plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
-    #     axes[1][2].plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
+    for j in range(24):
+        axes[0][3].plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
+        axes[0][3].plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
     plt.show()
 
 

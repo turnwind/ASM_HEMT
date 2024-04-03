@@ -1,5 +1,6 @@
 import json
-from tqdm import tqdm
+import DC_modeling
+import DataExtraction
 from sklearn.model_selection import train_test_split
 import numpy as np
 
@@ -8,6 +9,13 @@ filenames = ['ds_input{}.json', 'ds_trans_lin{}.json', 'ds_sub{}.json', 'ds_tran
 ##### data
 dataY = []
 dataX = []
+
+mds_out = DataExtraction.loadmeasures(8)
+test = []
+for j in range(24):
+    test.append(mds_out[j, :, 1])
+
+test = np.array(test).reshape(1,24,121)
 
 with open("Datafortranin//paras2.json") as f:
     dataY = json.load(f)
@@ -67,17 +75,22 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 # 定义损失函数
 criterion = nn.MSELoss()
 # 训练模型
-for epoch in range(100):
-    for i, (features, labels) in enumerate(train_data_loader):
-        #features = features.permute(0,2,1)
-        outputs = model(features)
-        loss = criterion(outputs, labels)
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-    print(f'Epoch {epoch+1}/{100}, Loss: {loss.item()}')
 
-torch.save(model.state_dict(),"LSTM100v3.pth")
+model.load_state_dict(torch.load('LSTM100v3.pth'))
+model = model.eval() # 转换成测试模式
+
+pred = model(torch.from_numpy(test).float())
+pred = pred.detach().numpy()
+pred =  pred*(arr_max - arr_min) + arr_min
+
+DC_paras = ["voff", "nfactor", "u0", "ua", "Igsdio", "Njgs", "Igddio", "Njgd", "Rshg", "Eta0", "Vdscale", "Cdscd",
+            "Rsc", "Rdc", "UTE", "RTH0", "LAMBDA", "Vsat", "Tbar"]
+param = {}
+
+for i in range(len(DC_paras)):
+    param[DC_paras[i]] = pred[0][i]
 
 
+#DC_modeling.plotsingle(param,0)
+DC_modeling.plots(param)
 
