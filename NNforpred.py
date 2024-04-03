@@ -27,6 +27,9 @@ with open("Datafortranin//X2.json") as f:
     dataX = json.load(f)
 dataX = np.array(dataX)
 
+# dataX = np.transpose(dataX, (2, 0, 1))
+#dataY = dataY.reshape(-1, 1, 19)
+
 import torch
 import torch.nn as nn
 
@@ -40,7 +43,7 @@ from torch.utils.data import TensorDataset, DataLoader
 # 定义数据集
 train_dataset = TensorDataset(X_train_torch, Y_train_torch)
 # 定义数据加载器
-train_data_loader = DataLoader(dataset=train_dataset, batch_size=32, shuffle=True)
+train_data_loader = DataLoader(dataset=train_dataset, batch_size=8, shuffle=True)
 
 #####
 
@@ -57,19 +60,21 @@ class Net(nn.Module):
 # 初始化网络
 model = Net()
 # 选择优化器
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 # 定义损失函数
 criterion = nn.MSELoss()
 # 训练模型
 for epoch in range(100):
     for i, (features, labels) in enumerate(train_data_loader):
+        features = features.permute(0,2,1)
         outputs = model(features)
         loss = criterion(outputs, labels)
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-    if (epoch+1) % 1 == 0:
-        print(f'Epoch {epoch+1}/{100}, Loss: {loss.item()}')
+    print(f'Epoch {epoch+1}/{100}, Loss: {loss.item()}')
+
+torch.save(model.state_dict(),"LSTM100.pth")
 
 
 
