@@ -3,9 +3,13 @@ import subprocess
 import json
 import numpy as np
 
+
+
+current_data_extration_path = os.path.dirname(os.path.abspath(__file__))
 def run_script(filename):
     resfile = "res_" + filename
-    script = r'C:\Users\87515\Documents\PyProject\ASM_HEMT\test_model\script.bat'
+    # script = r'C:\Users\87515\Documents\PyProject\ASM_HEMT\test_model\script.bat'
+    script = current_data_extration_path + "/test_model/script.bat"
 
     with open(script, 'r') as file:
         data = file.readlines()
