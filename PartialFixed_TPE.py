@@ -5,7 +5,6 @@ import json
 import time
 import optuna
 import optuna.visualization as vis
-import logging
 import DC_modeling
 import DataExtraction
 from DC_modeling import Getdatas
