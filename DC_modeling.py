@@ -1,8 +1,6 @@
 import numpy as np
 import DataExtraction
 import re
-import plotly.express as px
-import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
