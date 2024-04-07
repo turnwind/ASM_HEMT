@@ -82,7 +82,9 @@ mds_out = DataExtraction.loadmeasures(8)
 def generate_paras(pbounds):
     paras = {}
     for key, (low, high) in pbounds.items():
-        paras[key] = np.random.uniform(low, high)
+        value = np.random.uniform(low, high)
+        value = float('%.4g' % value)
+        paras[key] = value
     return paras
 
 def Changeparas(paras):
@@ -93,7 +95,7 @@ def Changeparas(paras):
         # 替换参数值
         for parameter, new_value in paras.items():
             parameter = parameter.lower()
-            new_value = float('%.4g' % new_value)
+            #new_value = float('%.4g' % new_value)
             new_value = str(new_value).upper()
             content = re.sub(f'{parameter} =[\d\w\+\-E\.]*', f'{parameter} ={new_value}', content, flags=re.IGNORECASE)
 
@@ -210,6 +212,9 @@ def plotsingle(paras,flag):
         for j in range(24):
             plt.plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
             plt.plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
+        plt.xlabel("vd")
+        plt.ylabel("id")
+        plt.suptitle('output')
     plt.show()
 
 def plots(paras):
@@ -228,20 +233,32 @@ def plots(paras):
     axes[0][1].plot(datas_input[0, :, 0], -datas_input[0, :, 12], c="blue")
     axes[0][0].plot(mds_input[0, :, 0], mds_input[0, :, 1], marker="o", c="red")
     axes[0][1].plot(mds_input[0, :, 0], mds_input[0, :, 2], marker="o", c="red")
+    axes[0][0].set_xlabel("vg")
+    axes[0][0].set_ylabel("ig")
+    axes[0][1].set_xlabel("vg")
+    axes[0][1].set_ylabel("id")
+    axes[0][0].set_title('ig_vgs__Input')
+    axes[0][1].set_title('ig_vgs__Input')
 
     # ### lin
-    axes[1][0].plot(datas_trans_lin[0, :, 0], -datas_trans_lin[0, :, 13], label="50mv")
-    axes[1][0].plot(datas_trans_lin[1, :, 0], -datas_trans_lin[1, :, 13], label="100mv")
-    axes[1][0].plot(datas_trans_lin[2, :, 0], -datas_trans_lin[2, :, 13], label="150mv")
+    axes[1][0].plot(datas_trans_lin[0, :, 0], -datas_trans_lin[0, :, 13], label="50mv",c="blue")
+    axes[1][0].plot(datas_trans_lin[1, :, 0], -datas_trans_lin[1, :, 13], label="100mv",c="blue")
+    axes[1][0].plot(datas_trans_lin[2, :, 0], -datas_trans_lin[2, :, 13], label="150mv",c="blue")
     axes[1][0].plot(mds_trans_lin[0, :, 0], mds_trans_lin[0, :, 1], label="m_50mv", marker="o", c="red")
     axes[1][0].plot(mds_trans_lin[1, :, 0], mds_trans_lin[1, :, 1], label="m_100mv", marker="o", c="red")
     axes[1][0].plot(mds_trans_lin[2, :, 0], mds_trans_lin[2, :, 1], label="m_150mv", marker="o", c="red")
+    axes[1][0].set_title("Transfer_lin")
+    axes[1][0].set_xlabel("Vg")
+    axes[1][0].set_ylabel("Id")
+
     #
     # ### sub
     for j in range(21):
         axes[1][1].plot(datas_trans_sub[0, :, 0], -datas_trans_sub[j, :, 13], c="blue")
         axes[1][1].plot(mds_trans_sub[0, :, 0], mds_trans_sub[j, :, 1], marker="o", c="red", markersize=2)
-
+    axes[1][1].set_xlabel("Vg")
+    axes[1][1].set_ylabel("Ig")
+    axes[1][1].set_title("id_vgs__Transfer_subVOFF")
     # ### trans
     for j in range(6):
         axes[0][2].plot(datas_trans[0, :, 0], -datas_trans[j, :, 13], c="blue")
@@ -250,10 +267,19 @@ def plots(paras):
     for k in range(len(datas_trans[:])):
         axes[1][2].plot(xx, -datas_trans[:, k, 13], c="blue")
         axes[1][2].plot(xx, mds_trans[:, k, 1], marker="o", c="red", markersize=2)
-    #
+    axes[0][2].set_xlabel("vg")
+    axes[0][2].set_ylabel("id")
+    axes[1][2].set_xlabel("vd")
+    axes[1][2].set_ylabel("id")
+    axes[0][2].set_title('ig_vgs__Transfer')
+    axes[1][2].set_title('ig_vgs__Transfer')
+    ### out
     for j in range(24):
         axes[0][3].plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
         axes[0][3].plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
+    axes[0][3].set_xlabel("vd")
+    axes[0][3].set_ylabel("id")
+    axes[0][3].set_title('output')
     plt.show()
 
 
@@ -271,38 +297,59 @@ def update(i):
     for k in range(2):
         for j in range(4):
             axes[k][j].clear()
-    # 绘制新的帧
+
     #### input
     axes[0][0].plot(datas_input[0, :, 0], -datas_input[0, :, 13], c="blue")
     axes[0][1].plot(datas_input[0, :, 0], -datas_input[0, :, 12], c="blue")
     axes[0][0].plot(mds_input[0, :, 0], mds_input[0, :, 1], marker="o", c="red")
     axes[0][1].plot(mds_input[0, :, 0], mds_input[0, :, 2], marker="o", c="red")
+    axes[0][0].set_xlabel("vg")
+    axes[0][0].set_ylabel("ig")
+    axes[0][1].set_xlabel("vg")
+    axes[0][1].set_ylabel("id")
+    axes[0][0].set_title('ig_vgs__Input')
+    axes[0][1].set_title('ig_vgs__Input')
 
     # ### lin
-    axes[1][0].plot(datas_trans_lin[0,:,0],-datas_trans_lin[0,:,13],label = "50mv")
-    axes[1][0].plot(datas_trans_lin[1,:,0],-datas_trans_lin[1,:,13], label = "100mv")
-    axes[1][0].plot(datas_trans_lin[2,:,0],-datas_trans_lin[2,:,13], label = "150mv")
-    axes[1][0].plot(mds_trans_lin[0,:,0],mds_trans_lin[0,:,1],label = "m_50mv",marker = "o",c="red")
-    axes[1][0].plot(mds_trans_lin[1,:,0],mds_trans_lin[1,:,1], label = "m_100mv",marker = "o",c="red")
-    axes[1][0].plot(mds_trans_lin[2,:,0],mds_trans_lin[2,:,1], label = "m_150mv",marker = "o",c="red")
+    axes[1][0].plot(datas_trans_lin[0, :, 0], -datas_trans_lin[0, :, 13], label="50mv",c="blue")
+    axes[1][0].plot(datas_trans_lin[1, :, 0], -datas_trans_lin[1, :, 13], label="100mv",c="blue")
+    axes[1][0].plot(datas_trans_lin[2, :, 0], -datas_trans_lin[2, :, 13], label="150mv",c="blue")
+    axes[1][0].plot(mds_trans_lin[0, :, 0], mds_trans_lin[0, :, 1], label="m_50mv", marker="o", c="red")
+    axes[1][0].plot(mds_trans_lin[1, :, 0], mds_trans_lin[1, :, 1], label="m_100mv", marker="o", c="red")
+    axes[1][0].plot(mds_trans_lin[2, :, 0], mds_trans_lin[2, :, 1], label="m_150mv", marker="o", c="red")
+    axes[1][0].set_title("Transfer_lin")
+    axes[1][0].set_xlabel("Vg")
+    axes[1][0].set_ylabel("Id")
+
     #
     # ### sub
     for j in range(21):
-        axes[1][1].plot(datas_trans_sub[0,:,0],-datas_trans_sub[j,:,13],c ="blue")
+        axes[1][1].plot(datas_trans_sub[0, :, 0], -datas_trans_sub[j, :, 13], c="blue")
         axes[1][1].plot(mds_trans_sub[0, :, 0], mds_trans_sub[j, :, 1], marker="o", c="red", markersize=2)
-
+    axes[1][1].set_xlabel("Vg")
+    axes[1][1].set_ylabel("Ig")
+    axes[1][1].set_title("id_vgs__Transfer_subVOFF")
     # ### trans
     for j in range(6):
-        axes[0][2].plot(datas_trans[0,:,0],-datas_trans[j,:,13],c ="blue")
+        axes[0][2].plot(datas_trans[0, :, 0], -datas_trans[j, :, 13], c="blue")
         axes[0][2].plot(mds_trans[0, :, 0], mds_trans[j, :, 1], marker="o", c="red", markersize=2)
     xx = np.arange(0.1, 24.1, 4)
     for k in range(len(datas_trans[:])):
-        axes[1][2].plot(xx,-datas_trans[:,k,13],c ="blue")
+        axes[1][2].plot(xx, -datas_trans[:, k, 13], c="blue")
         axes[1][2].plot(xx, mds_trans[:, k, 1], marker="o", c="red", markersize=2)
-
+    axes[0][2].set_xlabel("vg")
+    axes[0][2].set_ylabel("id")
+    axes[1][2].set_xlabel("vd")
+    axes[1][2].set_ylabel("id")
+    axes[0][2].set_title('ig_vgs__Transfer')
+    axes[1][2].set_title('ig_vgs__Transfer')
+    ### out
     for j in range(24):
-         axes[0][3].plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
-         axes[0][3].plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
+        axes[0][3].plot(datas_out[0,:,0],-datas_out[j,:,13],c ="blue")
+        axes[0][3].plot(mds_out[0, :, 0], mds_out[j, :, 1], marker="o", c="red", markersize=2)
+    axes[0][3].set_xlabel("vd")
+    axes[0][3].set_ylabel("id")
+    axes[0][3].set_title('output')
 
     paras = generate_paras(pbounds)
     Changeparas(paras)

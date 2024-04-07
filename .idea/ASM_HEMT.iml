@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/2DC_ini.txt_data" />
+      <excludeFolder url="file://$MODULE_DIR$/Avail_Meas_Data" />
+      <excludeFolder url="file://$MODULE_DIR$/Datafortranin" />
+      <excludeFolder url="file://$MODULE_DIR$/Datafortranin/Datafortranin" />
+      <excludeFolder url="file://$MODULE_DIR$/model" />
+      <excludeFolder url="file://$MODULE_DIR$/model/dc_annotation/_3%C%V_ini#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/model/dc_annotation/_5%D%C_input#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/model/dc_annotation/_5%D%C_output#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/model/dc_annotation/_5%D%C_trans#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/model/dc_annotation/_5%D%C_trans_su#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/model2" />
+      <excludeFolder url="file://$MODULE_DIR$/model2/dc_annotation" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model/dc_annotation/_5%D%C_input#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model/dc_annotation/_5%D%C_output#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model/dc_annotation/_5%D%C_trans#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model/dc_annotation/_5%D%C_trans_su#2etxt__" />
+      <excludeFolder url="file://$MODULE_DIR$/test_model/dc_annotation/_testnet#2etxt__" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

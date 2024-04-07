@@ -6,7 +6,9 @@ from DC_modeling import Getdatas
 def generate_paras(pbounds):
     paras = {}
     for key, (low, high) in pbounds.items():
-        paras[key] = np.random.uniform(low, high)
+        value = np.random.uniform(low, high)
+        value = float('%.4g' % value)
+        paras[key] = value
     return paras
 
 pbounds = {
@@ -33,14 +35,13 @@ pbounds = {
 
 #设置随机数种子
 import numpy as np
-import time
-np.random.seed(int(time.time()))
+np.random.seed(0)
 
 from tqdm import tqdm
 
-iters = 10000
+iters = 7502
 
-for i in tqdm(range(iters+1, iters+10001)):
+for i in tqdm(range(iters+1,10001)):
     paras = generate_paras(pbounds)
     DC_modeling.Changeparas(paras)
     datas_input = Getdatas("test_model//5DC_input.txt", "Plotname: DC dc1[1]")
@@ -78,13 +79,13 @@ for i in tqdm(range(iters+1, iters+10001)):
         #         file.write("%s\n" % item)
         with open(filename, 'w') as f:
             json.dump(data, f)
+    paras = list(paras.values())
     try:
-        with open('Datafortranin//paras.json', 'r') as f:
-
+        with open('Datafortranin//paras1.json', 'r') as f:
             data = json.load(f)
         data.append(paras)
-        with open('Datafortranin//paras.json', 'w') as f:
+        with open('Datafortranin//paras1.json', 'w') as f:
             json.dump(data, f)
     except:
-        with open('Datafortranin//paras.json', 'w') as f:
+        with open('Datafortranin//paras1.json', 'w') as f:
             json.dump([paras], f)

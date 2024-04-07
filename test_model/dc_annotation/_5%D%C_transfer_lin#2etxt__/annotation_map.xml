@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<annotation_files Time="周日 3月 31 13:53:14 2024" Simulator="hpeesofsim" Version="1.0">
- <File name="annotation_1.xml">
-  <Controller name="dc1">
-   <P>VDGROUND.Vdc: 5.0000000000000003e-02</P>
-   <P>VGGROUND.Vdc: -3.0000000000000000e+00</P>
-  </Controller>
- </File>
-</annotation_files>

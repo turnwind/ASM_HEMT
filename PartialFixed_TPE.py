@@ -49,9 +49,13 @@ for i in pbounds.keys():
     i = i.lower()
     pattern = " "+i + r" =([\d\w\+\-E\.]+)"
     value = re.findall(pattern,content)
-    inivalue[i] = float(value[0])
+    value = float(value[0])
+    inivalue[i] = value
+    low = min(0.8*value,1.2*value)
+    high = max(0.8 * value, 1.2 * value)
+    pbounds[i] = (low,high)
 
-print(inivalue)
+#print(inivalue)
 # flag = [0,0,0,0] - 1 2 4 8
 flag = 1
 def objective(trial):
@@ -103,9 +107,9 @@ fixed = {
 
 study1 = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
 study1.sampler = optuna.samplers.PartialFixedSampler(fixed,study1.sampler)
-study1.optimize(objective, n_trials=100, show_progress_bar=True,callbacks=[print_params_callback])
+study1.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
 print("period 1: " + str(study1.best_params))
-# DC_modeling.plotsingle(study1.best_params,1)
+DC_modeling.plotsingle(study1.best_params,1)
 # plt.plot(values)
 # plt.show()
 
@@ -119,9 +123,9 @@ fixed = { 'voff': study1.best_params['voff'], 'nfactor': study1.best_params["nfa
 values = []
 study2 = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
 study2.sampler = optuna.samplers.PartialFixedSampler(fixed,study2.sampler)
-study2.optimize(objective, n_trials=100, show_progress_bar=True,callbacks=[print_params_callback])
+study2.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
 print("period 2: " + str(study2.best_params))
-# DC_modeling.plotsingle(study2.best_params,2)
+DC_modeling.plotsingle(study2.best_params,2)
 # plt.plot(values)
 # plt.show()
 
@@ -144,10 +148,10 @@ inipara = {
 values = []
 #study1.enqueue_trial(inipara)
 study1.sampler = optuna.samplers.PartialFixedSampler(fixed,study1.sampler)
-study1.optimize(objective, n_trials=100, show_progress_bar=True,callbacks=[print_params_callback])
+study1.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
 
-# print("period 3: " + str(study1.best_params))
-# DC_modeling.plotsingle(study1.best_params,1)
+print("period 3: " + str(study1.best_params))
+DC_modeling.plotsingle(study1.best_params,1)
 # plt.plot(values)
 # plt.show()
 
@@ -161,9 +165,9 @@ fixed = { 'voff': study1.best_params['voff'], 'nfactor': study1.best_params["nfa
 values = []
 study4 = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
 study4.sampler = optuna.samplers.PartialFixedSampler(fixed,study4.sampler)
-study4.optimize(objective, n_trials=100, show_progress_bar=True,callbacks=[print_params_callback])
+study4.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
 print("period 4: " + str(study4.best_params))
-# DC_modeling.plotsingle(study4.best_params,4)
+DC_modeling.plotsingle(study4.best_params,4)
 # plt.plot(values)
 # plt.show()
 
@@ -176,18 +180,12 @@ fixed = { 'voff': study1.best_params['voff'], 'nfactor': study1.best_params["nfa
 values = []
 study8 = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
 study8.sampler = optuna.samplers.PartialFixedSampler(fixed,study8.sampler)
-study8.optimize(objective, n_trials=200, show_progress_bar=True,callbacks=[print_params_callback])
+study8.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
 print("period 5: " + str(study8.best_params))
 DC_modeling.plotsingle(study8.best_params,8)
-plt.plot(values)
-plt.show()
-
-#vis.plot_optimization_history(study).show()
-# Plot the importance of parameters
-#vis.plot_param_importances(study).show()
-
-#vis.plot_contour(study, params=['Rg', 'Rd', 'Rs']).show()
-# Plot the slice of parameters
-#vis.plot_slice(study, params=['Rg', 'Rd', 'Rs']).show()
+#plt.plot(values)
+#plt.show()
 
 
+
+DC_modeling.plots(study8.best_params)
