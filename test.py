@@ -43,7 +43,14 @@ mds_out = DataExtraction.loadmeasures(8)
 inivalue = {}
 with open("test_model/inivalue.txt","r") as file:
     content = file.read()
+with open("fitvalues.json","r") as file:
+    fitdata = np.array(json.load(file))
 
+def translinloss(ds,fitdata):
+    loss1 = DC_modeling.RMSE(-fitdata[0, :, 13], -ds[0, :, 13])
+    loss2 = DC_modeling.RMSE(-fitdata[1, :, 13], -ds[1, :, 13])
+    loss3 = DC_modeling.RMSE(-fitdata[2, :, 13], -ds[2, :, 13])
+    return np.average([loss1, loss2, loss3])
 
 for i in pbounds.keys():
     i = i.lower()
@@ -59,6 +66,7 @@ for i in pbounds.keys():
 #print(inivalue)
 # flag = [0,0,0,0] - 1 2 4 8
 flag = 1
+values = []
 def objective(trial):
     # Define the parameters for the trial
     params = {
@@ -100,13 +108,22 @@ def objective(trial):
         #  DC_modeling.transsubloss(mds_trans_sub, datas_trans_sub), DC_modeling.transloss(mds_trans, datas_trans)])
         loss = np.average(
         [DC_modeling.transsubloss(mds_trans_sub, datas_trans_sub), DC_modeling.transloss(mds_trans, datas_trans)])
-    return loss
+    DC_modeling.plotsingle(params, 1)
+    values.append(translinloss(datas_trans_lin,fitdata))
+    loss2 = []
+    print("\n")
+    for i in range(1):
+        loss2.append(int(input(" {} : ".format(i))))
+    loss2 = 5 - np.average(loss2)
+    return loss2 #bot mode
+    # return loss  #obj mode
+    # # mixed mode
+    # w = 0.99
+    # return  w*loss+(1-w)*loss2
 
-
-values = []
 def print_params_callback(study, trial):
     params = trial.params
-    values.append(trial.values[0])
+    #values.append(trial.values[0])
     #print(f"Iteration: {trial.number}, loss: {trial.values[0]}")
 
 ### 1
@@ -120,8 +137,19 @@ fixed = {
 
 study1 = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
 study1.sampler = optuna.samplers.PartialFixedSampler(fixed,study1.sampler)
-study1.optimize(objective, n_trials=50, show_progress_bar=True,callbacks=[print_params_callback])
-print("period 1: " + str(study1.best_params))
+study1.optimize(objective, n_trials=10, show_progress_bar=True,callbacks=[print_params_callback])
+#print("period 1: " + str(study1.best_params))
 DC_modeling.plotsingle(study1.best_params,1)
-# plt.plot(values)
-# plt.show()
+DC_modeling.Changeparas(study1.best_params)
+datas_trans_lin = Getdatas("test_model//5DC_transfer_lin.txt", "Plotname: DC ct1[1]")
+### iter_record
+with open("bot_10.json", 'w') as file:
+    json.dump(values, file)
+xx = np.arange(1,11,1)
+plt.scatter(xx,values)
+bestvalues = []
+for i in range(len(values)):
+    bestvalues.append(min(values[:i+1]))
+plt.plot(bestvalues)
+plt.show()
+
