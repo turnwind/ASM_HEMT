@@ -44,6 +44,7 @@ inivalue = {}
 with open("test_model/inivalue.txt","r") as file:
     content = file.read()
 
+
 for i in pbounds.keys():
     i = i.lower()
     pattern = " "+i + r" =([\d\w\+\-E\.]+)"
@@ -54,6 +55,7 @@ for i in pbounds.keys():
     high = max(0.8 * value, 1.2 * value)
     pbounds[i] = (low,high)
 
+#DC_modeling.plots(inivalue)
 #print(inivalue)
 # flag = [0,0,0,0] - 1 2 4 8
 flag = 1
@@ -73,8 +75,18 @@ def objective(trial):
         datas_trans_sub = Getdatas("test_model//5DC_trans_su.txt", "Plotname: DC ct1[1]")
     elif flag == 8:
         datas_trans = Getdatas("test_model//5DC_trans.txt", "Plotname: DC ct1[1]")
+    else:
+        #datas_input = Getdatas("test_model//5DC_input.txt", "Plotname: DC dc1[1]")
+        #datas_trans_lin = Getdatas("test_model//5DC_transfer_lin.txt", "Plotname: DC ct1[1]")
+        datas_trans_sub = Getdatas("test_model//5DC_trans_su.txt", "Plotname: DC ct1[1]")
+        datas_trans = Getdatas("test_model//5DC_trans.txt", "Plotname: DC ct1[1]")
 
     if flag == 1:
+        # loss1 = np.abs(mds_trans_lin[0, :, 1]+datas_trans_lin[0, :, 13])
+        # loss2 = np.abs(mds_trans_lin[1, :, 1]+datas_trans_lin[1, :, 13])
+        # loss3 = np.abs(mds_trans_lin[2, :, 1]+datas_trans_lin[2, :, 13])
+        # l = (loss1+loss2+loss3)/3
+        # print(np.round(l,4))
         loss = DC_modeling.translinloss(mds_trans_lin, datas_trans_lin)
     elif flag == 2:
         loss = DC_modeling.inputloss(mds_input, datas_input)
@@ -83,9 +95,11 @@ def objective(trial):
     elif flag == 8:
         loss =  DC_modeling.transloss(mds_trans, datas_trans)
     else:
+        # loss = np.average(
+        # [DC_modeling.inputloss(mds_input, datas_input), DC_modeling.translinloss(mds_trans_lin, datas_trans_lin),
+        #  DC_modeling.transsubloss(mds_trans_sub, datas_trans_sub), DC_modeling.transloss(mds_trans, datas_trans)])
         loss = np.average(
-        [DC_modeling.inputloss(mds_input, datas_input), DC_modeling.translinloss(mds_trans_lin, datas_trans_lin),
-         DC_modeling.transsubloss(mds_trans_sub, datas_trans_sub), DC_modeling.transloss(mds_trans, datas_trans)])
+        [DC_modeling.transsubloss(mds_trans_sub, datas_trans_sub), DC_modeling.transloss(mds_trans, datas_trans)])
     return loss
 
 
@@ -184,7 +198,17 @@ print("period 5: " + str(study8.best_params))
 DC_modeling.plotsingle(study8.best_params,8)
 #plt.plot(values)
 #plt.show()
-
-
-
 DC_modeling.plots(study8.best_params)
+
+### 6 fintune
+
+flag = 0
+for i in pbounds.keys():
+    value = study8.best_params[i]
+    low = min(0.8*value,1.2*value)
+    high = max(0.8 * value, 1.2 * value)
+    pbounds[i] = (low,high)
+
+study = optuna.create_study(sampler=optuna.samplers.TPESampler(),direction='minimize')
+study.optimize(objective, n_trials=75, show_progress_bar=True,callbacks=[print_params_callback])
+DC_modeling.plots(study.best_params)

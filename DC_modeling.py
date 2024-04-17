@@ -107,7 +107,7 @@ def Changeparas(paras):
 ######loss
 def MAPE(y_true, y_pred):
     y_true, y_pred = np.array(y_true), np.array(y_pred)
-    return np.mean(np.abs((y_true - y_pred) / y_true))
+    return np.mean(np.abs((y_true - y_pred) / (y_true+0.01)))
 
 def RMSE(y_true, y_pred):
     return np.sqrt(np.mean((y_pred - y_true)**2))
